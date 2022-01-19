@@ -1,0 +1,116 @@
+#map-svg {
+  background-color: #c0e3f6; /* possibly change this */
+  border: 1px solid gray;
+  width: 50%;
+  height: 45%;
+  position: absolute;
+  margin: 1.25%;
+  bottom: 0;
+  left: 0;
+}
+#line-svg {
+  border: 1px solid gray;
+  width: 50%;
+  height: 35%;
+  position: absolute;
+  margin-left: 1.25%;
+  margin-top: 5px;
+}
+#scatter-svg {
+  border: 1px solid gray;
+  width: 47%;
+  height: 45%;
+  position: absolute;
+  margin: 1.25%;
+  bottom: 0;
+  right: 0;
+}
+.error {
+  text-anchor: middle;
+  fill: #ccc;
+  font-weight: 500;
+}
+.axis-label {
+  font-weight: 600;
+  font-size: 18px;
+}
+#desc-div {
+  border: 1px solid gray;
+  width: 47%;
+  height: 35%;
+  position: absolute;
+  top: 100;
+  right: 1.25%;
+  /* margin: 1.25%; */
+  margin-top: 5px;
+}
+/* .highlighted {
+  stroke: #dc3545;
+  fill: #dc3545;
+  stroke-width: 4px;
+} */
+.graticule {
+  fill: none;
+  stroke: #777;
+  stroke-width: 0.5;
+  stroke-opacity: 0.5;
+}
+.boundary {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-opacity: 1;
+}
+.country,
+.state {
+  stroke: black;
+  stroke-width: 1;
+  fill: honeydew;
+}
+.widgets {
+  position: relative;
+  font-weight: 600;
+  width: 100%;
+  margin-left: 1.25%;
+}
+/* .yearWidget,
+.countryWidget {
+  /* margin-bottom: 10px; 
+} */
+#reset-zoom {
+  margin-left: 140px;
+}
+html {
+  font-family: "Trebuchet MS", sans-serif;
+}
+h2,
+h3 {
+  text-align: center;
+}
+
+div.tooltip,
+div.tooltip2 {
+  position: absolute;
+  text-align: center;
+  padding: 0.25rem;
+  background: #ffffff;
+  color: #313639;
+  border: 1px solid #313639;
+  border-radius: 8px;
+  pointer-events: none;
+  font-size: 1rem;
+}
+.symbol {
+  font-family: Segoe UI Emoji, Segoe UI Symbol, Symbola, Quivira;
+  font-size: 16px;
+}
+
+.desc {
+  padding: 1rem;
+}
+.description {
+  font-size: 14px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}

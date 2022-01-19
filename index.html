@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src='https://d3js.org/d3.v5.min.js'></script>
+    <script src="https://d3js.org/d3-geo-projection.v3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Overall Happiness in The World</title>
+  </head>
+  <div>
+    <h2>Overall Happiness in The World</h2>
+    <p class ="description">This dashboard is used to display how different countries rank in terms of happiness. Data for available years (2015-2020) can be selected by changing the value in the year field. 
+      Individual countries can be displayed on the line graph by clicking their location on the map or by clicking on the corresponding emoji in the scatter plot. Countries are represented
+      on the scatter plot with an emoji that corresponds to their largest contributing factor to the overall happiness rank. In the line graph, each happiness factor can be chosen with the 
+      Y-Axis selector and its history will be displayed.
+    </p>
+    <hr style='width:100%'>
+    <div class = "widgets">
+        <label for="yAttribute">Y attribute: </label> 
+        <select id='yAttr' width = '100%' onchange="updateLine()"> 
+          <option value="Happiness Rank">Happiness Rank</option>
+          <option value="GDP">GDP</option>
+          <option value="Freedom">Freedom</option>
+          <option value="Generosity">Generosity</option>
+          <option value="Trust">Trust</option>
+          <option value="Family">Family</option>
+          </select>
+        <label for="Year">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year: </label>
+        <input type='number' id="year-input" min="2015" max="2020" value="2015" onchange="updateScatter();"/> 
+        <input type='button' id = "reset-zoom" value='Reset Zoom' onclick='resetZoom();'/>
+      </div>
+  </div>
+    <svg id='line-svg'></svg>
+    <svg id='map-svg'></svg>
+    <svg id='scatter-svg'></svg>
+    <div class="desc" id='desc-div'>
+      <h2>What is this Viz?</h2>
+      <p>A country's measured happiness is determined through a calculation of 6 attributes that are rated from 0 to 10:
+        <ul>
+          <li>🤑 GDP - A country's measured Gross Domestic Product.</li>
+          <li>👨‍👩‍👦 Family/Social Support - The average family/social support system of citizens.</li>
+          <li>💓 Life Expectancy - The average life expectancy for citizens.</li>
+          <li>🗽 Freedom - The freedom for citizens to make their own life choices.</li>
+          <li>🏛️ Trust in Government - The citizens overall faith that their government is acting in their interests.</li>
+          <li>🤗 Generosity - The average amount of money a country's citizens give to charitable causes.</li>
+        </ul>
+        Each emoji on the chart below represents a country using it's highest contributing factor to their happiness.
+        <br/>The radial bar chart visualizes the contribution of these 6 attributes for each country's hapiness score.
+    </p>
+    </div>
+  </body>
+  <script src='js/main.js'></script>
+  </html>
