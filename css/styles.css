@@ -1,15 +1,13 @@
 #map-svg {
-  background-color: #c0e3f6; /* possibly change this */
-  border: 1px solid gray;
+  background-color: #c0e3f6;
   width: 50%;
   height: 45%;
   position: absolute;
   margin: 1.25%;
-  bottom: 0;
-  left: 0;
+  bottom: 0px;
+  left: 0px;
 }
 #line-svg {
-  border: 1px solid gray;
   width: 50%;
   height: 35%;
   position: absolute;
@@ -17,13 +15,12 @@
   margin-top: 5px;
 }
 #scatter-svg {
-  border: 1px solid gray;
   width: 47%;
   height: 45%;
   position: absolute;
   margin: 1.25%;
-  bottom: 0;
-  right: 0;
+  bottom: 0px;
+  right: 0px;
 }
 .error {
   text-anchor: middle;
@@ -35,20 +32,16 @@
   font-size: 18px;
 }
 #desc-div {
-  border: 1px solid gray;
   width: 47%;
   height: 35%;
   position: absolute;
-  top: 100;
-  right: 1.25%;
-  /* margin: 1.25%; */
+  top: 100px;
+  right: 20px;
+  margin-right: 1px;
+  margin: 1.25%;
   margin-top: 5px;
+  font-size: 0.87vw;
 }
-/* .highlighted {
-  stroke: #dc3545;
-  fill: #dc3545;
-  stroke-width: 4px;
-} */
 .graticule {
   fill: none;
   stroke: #777;
@@ -73,10 +66,6 @@
   width: 100%;
   margin-left: 1.25%;
 }
-/* .yearWidget,
-.countryWidget {
-  /* margin-bottom: 10px; 
-} */
 #reset-zoom {
   margin-left: 140px;
 }
@@ -87,7 +76,6 @@ h2,
 h3 {
   text-align: center;
 }
-
 div.tooltip,
 div.tooltip2 {
   position: absolute;
@@ -103,14 +91,19 @@ div.tooltip2 {
 .symbol {
   font-family: Segoe UI Emoji, Segoe UI Symbol, Symbola, Quivira;
   font-size: 16px;
+  font-size: 1vw;
 }
-
 .desc {
   padding: 1rem;
 }
 .description {
   font-size: 14px;
+  font-size: 0.729vw;
   padding-left: 1rem;
   padding-right: 1rem;
   text-align: center;
+}
+h2 {
+  font-size: 32;
+  font-size: 1.6vw;
 }
